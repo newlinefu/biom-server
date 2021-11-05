@@ -10,15 +10,15 @@ type KeyboardHandwritingData struct {
 }
 
 type SingleHoldCalculatingInformation struct {
-	HarResult []float64 `json:"har_result"`
-	HoldTime  []int     `json:"hold_time"`
+	HarResult []float64 `json:"harResult"`
+	HoldTime  []int     `json:"holdTime"`
 }
 
 type VectorCalculatingResultData struct {
 	Amplitude           int                                `json:"amplitude"`
-	PressCount          int                                `json:"press_count"`
-	FunctionsResult     []float64                          `json:"functions_result"`
-	HoldTimeCalculating []SingleHoldCalculatingInformation `json:"hold_time_calculating"`
+	PressCount          int                                `json:"pressCount"`
+	FunctionsResult     []float64                          `json:"functionsResult"`
+	HoldTimeCalculating []SingleHoldCalculatingInformation `json:"holdTimeCalculating"`
 }
 
 type InformationVectorResponse struct {
