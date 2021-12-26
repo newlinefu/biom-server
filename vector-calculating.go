@@ -88,3 +88,16 @@ func CalculateVectorWithInformation(records []KeyboardHandwritingData) (informat
 
 	return information, vector
 }
+
+func isVectorsEquals(vector1 []float64, vector2 []float64) bool {
+	if len(vector1) != len(vector2) {
+		return false
+	}
+	for i := 0; i < len(vector1); i++ {
+		if math.Abs(vector1[i]-vector2[i]) > float64(Amplitude) {
+			return false
+		}
+	}
+
+	return true
+}

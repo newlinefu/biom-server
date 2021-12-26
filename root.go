@@ -45,6 +45,7 @@ func main() {
 	UsersCollection = client.Database("KeywritingAuthUsers").Collection("Users")
 
 	router.POST("/v1/registration-with-vector-information", GetCalculatedVector)
+	router.POST("/v1/authorize", GetAuth)
 
 	err = router.Run("localhost:9000")
 	if err != nil {
